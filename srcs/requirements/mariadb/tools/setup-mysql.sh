@@ -36,11 +36,6 @@ if [ -z "$MYSQL_ROOT_PASSWORD" ] || [ -z "$MYSQL_DATABASE" ] || [ -z "$MYSQL_USE
 fi
 
 
-####################################################
-# *sleep 5 is for waiting for the database to start.
-# 2> /dev/mariadb-output.txt is for redirecting the error output of the mariadb service to a file.
-####################################################
-
 service mariadb start 2> /dev/mariadb-error-output.txt
 
 sleep 5 

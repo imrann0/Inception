@@ -32,9 +32,9 @@ else
 	echo -e "${YELLOW}Certificate already exists, skipping...${RESET}"
 fi
 
-sed -i "s|!CERTIFICATE_KEY_LOCATION!|${CRT_KEY}|g" \
+sed -i "s|!KEY!|${CRT_KEY}|g" \
 	/etc/nginx/conf.d/https.conf
-sed -i "s|!CERTIFICATE_LOCATION!|${CRT}|g" \
+sed -i "s|!CRT!|${CRT}|g" \
 	/etc/nginx/conf.d/https.conf
 
 echo -e "${GREEN}success SSL settings done, starting nginx...${RESET}"
